@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="communication between components">
+        <div class="slds-var-m-around_medium">
+            <template for:each={contactList} for:item="con">
+                <div key={con.id}>
+                    <a href="#" class="slds-text-heading_large" onclick={handleClick}> Contact Name - {con.fields.Name.value}</a>
+                    <p class="slds-text-body_regular">Email - {con.fields.Email.value}</p>
+                    <p class="slds-text-body_regular">Owner - {con.fields.Owner.displayValue}</p>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

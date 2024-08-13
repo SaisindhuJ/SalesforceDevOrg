@@ -1,0 +1,28 @@
+<apex:page > 
+    <apex:form >
+      <apex:pageBlock >
+      <apex:pageBlockSection >   
+      
+      <apex:actionRegion >    
+      <apex:commandButton value="Show"/>  
+          <apex:actionSupport event="onclick" rerender="A1"/>
+         
+      </apex:actionRegion>
+          
+     
+           
+      </apex:pageBlockSection>  
+       </apex:pageBlock>  
+      <apex:pageBlock id="A1">
+       <apex:pageBlockSection title="block" rendered="true"> 
+       
+      
+           
+           
+           
+      </apex:pageBlockSection>     
+          
+      </apex:pageBlock>    
+       
+    </apex:form>
+</apex:page>

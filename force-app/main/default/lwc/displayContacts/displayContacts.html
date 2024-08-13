@@ -1,0 +1,42 @@
+<template>
+    <template if:true={contactsData}>
+        <template if:false={isEditFlow}>
+            <!-- Name,Account.Name,Phone,Fax,Email-->
+        <lightning-button label="Edit" slot="actions" class="slds-float_right" onclick={handleEdit}></lightning-button>
+        <lightning-card title={contactsData.Name}>
+            <div class="slds-grid slds-wrap">
+                <div if:true={contactsData.Phone} class="slds-col slds-size_1-of-2 slds-var-p-around_medium">
+                    <span>Phone: {contactsData.Phone} </span>
+                </div>
+                <div if:true={contactsData.Fax} class="slds-col slds-size_1-of-2 slds-var-p-around_medium">
+                    <span>Fax: {contactsData.Fax} </span>
+                </div>
+                <div if:true={contactsData.Email} class="slds-col slds-size_1-of-2 slds-var-p-around_medium">
+                    <span>Email: {contactsData.Email} </span>
+                </div>
+            </div>
+        </lightning-card>
+        </template>
+        
+        <template if:true={isEditFlow}>
+            <lightning-card title={contactsData.Name}>
+                <div class="slds-grid slds-wrap">
+                    <div if:true={contactsData.Name} class="slds-col slds-size_1-of-2 slds-var-p-around_medium">
+                        <lightning-input label="Name" type="text" value={contactsData.Name} onchange={handleChange}></lightning-input>
+                    </div>
+                    <div if:true={contactsData.Phone} class="slds-col slds-size_1-of-2 slds-var-p-around_medium">
+                        <lightning-input label="Phone" type="tel" value={contactsData.Phone} onchange={handleChange}></lightning-input>
+                    </div>
+                    <div if:true={contactsData.Fax} class="slds-col slds-size_1-of-2 slds-var-p-around_medium">
+                        <lightning-input label="Fax" type="text" value={contactsData.Fax} onchange={handleChange}></lightning-input>
+                    </div>
+                    <div if:true={contactsData.Email} class="slds-col slds-size_1-of-2 slds-var-p-around_medium">
+                        <lightning-input label="Email" type="email" value={contactsData.Email} onchange={handleChange}></lightning-input>
+                    </div>
+                </div>
+                <lightning-button slot="footer" label="cancel" onclick={handleCancel} class="slds-var-p-around_medium"></lightning-button>
+                <lightning-button slot="footer" label="save" onclick={handleSave} class="slds-var-p-around_medium"></lightning-button>
+            </lightning-card>
+        </template>
+    </template>
+</template>

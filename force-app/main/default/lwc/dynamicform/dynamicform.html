@@ -1,0 +1,22 @@
+<template>
+    <lightning-card>
+        <div class="slds-var-m-around_medium">
+            <lightning-combobox
+                 name="FormType"
+                label = "Select Form Type"
+                value= ""
+                options={formOptions}
+                onchange={handleChange}
+                required="true">
+            </lightning-combobox>
+        </div>
+        <div class="slds-var-m-around_medium">
+            <template lwc:if= {showName}>
+                <lightning-input type="text" label="name"></lightning-input>
+            </template>
+            <template lwc:if= {showEmail}>
+                <lightning-input type="email" label="Email"></lightning-input>
+            </template>
+        </div>
+    </lightning-card>    
+</template>

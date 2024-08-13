@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="sample url request">
+        <div class="slds-p-around_medium">
+            <lightning-button variant="brand" label="GetEmployeesData" onclick={getDetails}></lightning-button>
+        </div>
+        <template if:true={allEmployees}>
+            <template for:each={allEmployees} for:item="emp">
+                <div class="slds-p-around_medium" key={emp.id}>
+                    <div> Employee Name -- {emp.employee_name} </div>
+                    <div> Employee Salary -- {emp.employee_salary} </div>
+                    <div> Employee Age -- {emp.employee_age} </div>        
+                </div>
+            </template>
+        </template>
+        <template if:true={showSpinner}>
+            <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+        </template>
+    </lightning-card>        
+</template>

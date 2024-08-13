@@ -1,0 +1,26 @@
+<apex:page standardController="Account">
+   <apex:form >
+     <apex:pageBlock title="Account Edit">
+        <apex:pageBlockSection title="Account Information">
+            <apex:inputField value="{!Account.name}"/>
+            <apex:inputField value="{!Account.Rating}" required="{!($Profile.Name = $Label.Profile)}"/> 
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Address Information">
+            <apex:inputField value="{!Account.Industry}" rendered="{!($Profile.Name = $Label.Profile)}"/>
+            
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Additional Information">
+             <apex:inputField value="{!Account.CustomerPriority__c}"/>
+             <apex:inputField value="{!Account.SLA__c}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Description Information">
+             <apex:inputField value="{!Account.Description}"/> 
+        </apex:pageBlockSection>
+        <apex:pageBlockButtons >
+            <apex:commandButton value="save" action="{!save}"/>
+            <apex:commandButton value="Edit" action="{!Edit}"/>
+            <apex:commandButton value="Delete" action="{!Delete}"/>
+        </apex:pageBlockButtons>
+     </apex:pageBlock>
+   </apex:form> 
+</apex:page>

@@ -1,0 +1,14 @@
+<apex:page >
+  <apex:pageBlock title="PAGE BLOCK">
+    <apex:pageBlockSection title="page section">
+        <h1>HEADER </h1> <br> </br>
+        Iam in page block section <br> </br>
+        This is new line
+    </apex:pageBlockSection>
+    <apex:pageBlockSection title="page section" >
+        <h1>HEADER </h1> <br> </br>
+        Iam in page block section <br> </br>
+        This is new line
+    </apex:pageBlockSection>
+  </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="listviewapi records">
+        <div class="slds-var-m-around_medium">
+            <template for:each={contactList} for:item="con">
+                <div key={con.Id}>
+                    <p>contact email - {con.fields.Email.value}</p>
+                    <p>contact name - {con.fields.Name.value}</p>
+                    <p>contact owner - {con.fields.Owner.value}</p>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

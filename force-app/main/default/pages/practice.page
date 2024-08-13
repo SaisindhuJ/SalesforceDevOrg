@@ -1,0 +1,6 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Practice page</h1> <br> </br>
+  This is my new Page
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

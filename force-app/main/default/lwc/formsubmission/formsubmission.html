@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title= "Form Submission">
+        <div class="slds-var-m-around_medium">
+            <lightning-input label="Name" value="" type="text" onchange={handleChange}></lightning-input>
+            <lightning-input label="Email" value="" type="email" onchange={handleChange}></lightning-input>
+            <lightning-input label="Phone" value="" type="phone" onchange={handleChange}></lightning-input>
+        </div>
+        
+            <div class="slds-align_absolute-center slds-var-m-vertical_small">
+                <div class="slds-var-m-around_medium">
+                    <lightning-button
+                    label="submit"
+                    variant="brand"
+                    onclick= {handleSubmit}>
+                    </lightning-button>
+                </div>   
+                <lightning-button
+                     label="Cancel"
+                     variant="brand"
+                     onclick= {handleCancel}>
+                    </lightning-button>     
+            </div>           
+    </lightning-card>    
+</template>

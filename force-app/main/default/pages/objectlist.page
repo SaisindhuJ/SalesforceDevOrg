@@ -1,0 +1,1 @@
+<apex:page action="{!URLFOR($Action.contact.List, $ObjectType.contact)}"/ >

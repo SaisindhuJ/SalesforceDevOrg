@@ -1,0 +1,21 @@
+<apex:page standardcontroller="Account" >
+<apex:pageBlock title="Page block" >
+<apex:pageBlockButtons >
+</apex:pageBlockButtons>
+<apex:pageBlockSection title="page block section1">
+<h1>Hello  </h1> <br> </br>
+  <b> {!$User.FirstName} {!$User.LastName} </b> <br> </br>
+  <b> This is {!account.name} Account </b> <br> </br>
+  <b> Account Rating = {!account.rating} </b> <br> </br>
+  <b> Account Annual Revenue is {!account.annualrevenue} dollors </b>
+ 
+<apex:pageBlockSectionItem id="item"> 
+</apex:pageBlockSectionItem>
+</apex:pageBlockSection>
+<apex:pageBlockSection title="page block section2">
+</apex:pageBlockSection>
+<apex:detail subject="{!account.ownerId}" relatedList="false" title="false" />
+</apex:pageBlock> 
+  
+  
+</apex:page>

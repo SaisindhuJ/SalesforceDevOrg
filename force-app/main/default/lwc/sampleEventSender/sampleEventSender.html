@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Event Sender">
+        <div class="slds-var-p-around_medium">
+            <lightning-input 
+                type="text" 
+                label="Enter First Value to send" 
+                onchange={handleChage1}>
+           </lightning-input>
+           <lightning-input 
+                type="text" 
+                label="Enter Second Value to send" 
+                onchange={handleChange2}>
+            </lightning-input>    
+            <lightning-button 
+                variant="brand" 
+                label="Send" 
+                onclick={handleSend}>
+            </lightning-button>
+        </div>
+
+        
+
+    </lightning-card>
+    
+</template>

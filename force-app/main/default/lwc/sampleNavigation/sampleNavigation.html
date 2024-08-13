@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="create Record Api">
+        <div class="slds-p-around_medium">
+            <lightning-input type="text" label="AccountName" onchange={handleChange}></lightning-input>
+            <lightning-input type="Phone" label="Phone" onchange={handleChange}></lightning-input>
+            <lightning-input type="text" label="Website" onchange={handleChange}></lightning-input>
+            <lightning-input type="text" label="Description" onchange={handleChange}></lightning-input>
+        </div>
+        <lightning-button class="slds-p-top-small" variant="brand" label="save" onclick={handleSave}></lightning-button>
+    </lightning-card>
+</template>

@@ -1,0 +1,11 @@
+<template>
+    <template if:true={contactList}>
+        <template for:each={contactList} for:item="con">
+            <c-display-contacts key={con.id} contacts-data={con} class="slds-var-p-around_medium" onupdatecontact={handleUpdate}></c-display-contacts>
+        </template>
+    </template>
+    <template if:false={contactList}>
+        <lightning-spinner size="medium" alternative-text="Loading"></lightning-spinner>
+    </template>
+
+</template>
