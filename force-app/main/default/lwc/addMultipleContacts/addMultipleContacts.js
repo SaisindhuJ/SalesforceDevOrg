@@ -1,6 +1,6 @@
 import { LightningElement,wire } from 'lwc';
+import { getObjectInfo } from 'lightning/uiObjectInfoApi';
 import { getPicklistValues } from 'lightning/uiObjectInfoApi';
-import { get ObjectInfo } from 'lightning/uiObjectInfoApi';
 import CONTACT_OBJECT from '@salesforce/schema/Contact';
 import GENDER_IDENTITY_FIELD from '@salesforce/schema/Contact.GenderIdentity';
 
