@@ -22,3 +22,6 @@ if(aMap1.containsKey(acc.name)){
 List<AggregateResult> topAccounts = [select Account.Name, sum(Amount) totalrevenue from Opportunity where AccountId != null group by Account.Name orderby totalrevenue desc limit 5];
 
 system.debug('topAccounts -->'+ topAccounts);
+
+LeaveRequestSampleData.CreateData();
+
